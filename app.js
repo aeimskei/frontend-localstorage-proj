@@ -28,12 +28,23 @@ function saveinputNames(name) {
   return true;
 }
 
+// Clear out names
+function removeNames() {
+  localStorage.removeItem('recentNames');
+}
+
 // Helper function
 // Create an li, given name input, append to the supplied ul
 function appendListItem(listElement, name) {
   let listItemElement = document.createElement('LI');
   listItemElement.innerHTML = name;
   listElement.appendChild(listItemElement);
+}
+
+// Helper function
+// Empty the input of all ul elements
+function clearList(listElement) {
+  listElement.innerHTML = '';
 }
 
 document.addEventListener('DOMContentLoaded', function(event) {
