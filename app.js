@@ -8,6 +8,15 @@ function supportsLocalStorage() {
   }
 }
 
+// Retrieve names from Local Storage, return an array
+function getRecentNames() {
+  let names = localStorage.getItem('recentNames');
+  if (names) {
+    return JSON.parse(names);
+  }
+  return [];
+}
+
 document.addEventListener('DOMContentLoaded', function(event) {
   // Check for Local Storage exists before trying to use it
   if (supportsLocalStorage()) {
