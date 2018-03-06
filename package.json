@@ -1,0 +1,18 @@
+{
+  "name": "frontend-localstorage-proj",
+  "version": "1.0.0",
+  "description": "A simple one page application to demonstrate usage of HTML, CSS, JavaScript and local storage. It'll auto-populate the list. Names will still persist between sessions.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  }
+}
