@@ -103,3 +103,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
   padding: 15px 20px; 
 }
+
+.block-landing {
+  background-color: #004e92;
+  padding: 40px 15px 50px;
+  text-align: center;
+  color: white;
+}
+
+a{
+  color: white;
+}

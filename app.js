@@ -1,12 +1,12 @@
 'use strict';
 // Test for local storage
-function supportsLocalStorage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch(error){
-    return false;
-  }
-}
+// function localStorageWorks() {
+//   try {
+//     return 'localStorage' in window && window['localStorage'] !== null;
+//   } catch(error){
+//     return false;
+//   }
+// }
 
 // Get names from Local Storage, return an array
 function getRecentNames() {
@@ -16,6 +16,9 @@ function getRecentNames() {
   }
   return [];
 }
+
+// Validate email
+
 
 // Validate and save names to store of past names
 function saveinputNames(name) {
@@ -49,7 +52,7 @@ function clearList(listElement) {
 
 document.addEventListener('DOMContentLoaded', function(event) {
   // Check for Local Storage exists before trying to use it
-  if (supportsLocalStorage()) {
+  // if (localStorageWorks()) {
     // Get references to DOM elements
     let inputName = document.getElementById('inputName');
     let inputBar = document.getElementById('inputBar');
@@ -59,10 +62,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     // Display list of names
     let recentNames = getRecentNames();
     recentNames.forEach(function(inputNames) {
-      appendListItem(recentNamesList,inputNames);
+      appendListItem(recentNamesList, inputNames);
     });
 
-    // Set up event handlers
+    // Set up event handler for submit
     inputName.addEventListener('submit', function(event) {
       let inputNames = inputBar.value;
       if (saveinputNames(inputNames)) {
@@ -75,5 +78,5 @@ document.addEventListener('DOMContentLoaded', function(event) {
       removeNames();
       clearList(recentNamesList);
     });
-  }
+  // }
 });
